@@ -1,6 +1,6 @@
 
 
-Your Monitor Number = #$34t#
+Your Monitor Number = 82
 
 
 
@@ -1707,14 +1707,14 @@ conf t
   no shut
  int g2
   no shut
-  ip add 10.#$34t#.1.11 255.255.255.0
+  ip add 10.82.1.11 255.255.255.0
  int g3
   no shut
   ip add 11.11.11.100 255.255.255.224
   exit
  ip route 0.0.0.0 0.0.0.0 208.8.8.2
- ip route 10.0.0.0 255.0.0.0 10.#$34t#.1.4
- ip route 200.0.0.0 255.255.255.0 10.#$34t#.1.4
+ ip route 10.0.0.0 255.0.0.0 10.82.1.4
+ ip route 200.0.0.0 255.255.255.0 10.82.1.4
  ip name-server 8.8.8.8 1.1.1.1
  ip domain lookup
  !
@@ -1774,9 +1774,9 @@ start-service sshd
 
 !@PH
 sudo su
-ifconfig eth0 10.#$34T#.1.100 netmask 255.255.255.0 up
-route add default gw 10.#$34T#.1.11
-ping 10.#$34T#.1.11
+ifconfig eth0 10.82.1.100 netmask 255.255.255.0 up
+route add default gw 10.82.1.11
+ping 10.82.1.11
 
 
 !@JP
@@ -1788,6 +1788,6 @@ ping 208.8.8.11
 
 
 !@IAM-LDAP
-route add 0.0.0.0 mask 0.0.0.0 10.#$34T#.1.11
+route add 0.0.0.0 mask 0.0.0.0 10.82.1.11
 
 
