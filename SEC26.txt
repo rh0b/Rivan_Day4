@@ -1065,9 +1065,6 @@ www.freeanimeonline.com
 ~~~
 !@UTM-PH
 config t
- ip access-list extended NAT 
-  25 deny ip 208.8.8.0 0.0.0.255 208.8.8.0 0.0.0.255
-  exit
  service finger
  service tcp-small-servers
  service udp-small-servers
